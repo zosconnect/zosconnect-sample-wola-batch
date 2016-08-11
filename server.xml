@@ -1,0 +1,66 @@
+<server description="zOS Connect Server">
+
+    <!-- Enable features -->
+    <featureManager>
+        <feature>zosconnect:zosconnect-2.0</feature>
+        <feature>appSecurity-2.0</feature>
+        <feature>zosLocalAdapters-1.0</feature>
+    </featureManager>
+
+    <keyStore id="defaultKeyStore" password="Liberty"/>
+
+    <keyStore id="defaultTrustStore" password="Liberty"/>
+
+    <webAppSecurity allowFailOverToBasicAuth="true"/> 
+
+    <basicRegistry id="basic1" realm="zosConnect">
+        <user name="test" password="testpwd"/>
+    </basicRegistry>
+
+    <authorization-roles id="zos.connect.access.roles">
+        <security-role name="zosConnectAccess">
+            <user name="test"/>
+        </security-role>
+    </authorization-roles>
+
+    <zosconnect_zosConnectManager requireSecure="false" requireAuth="false"/>
+
+    <zosconnect_zosConnectAPIs location="">
+        <zosConnectAPI name=“CobolService”/>
+    </zosconnect_zosConnectAPIs>
+
+    <zosconnect_zosConnectService dataXformRef="xformJSON2Byte" 
+            id="CobolService" 
+            invokeURI="/CobolService" 
+            requireAuth="false" 
+            requireSecure="false" 
+            serviceDescription="Test COBOL batch program" 
+            serviceName="CobolService" 
+            serviceRef="wolaBATCH"/>
+
+    <zosconnect_zosConnectDataXform bindFileLoc="/var/zosconnect/servers/server1/dataXform/bind" 
+            bindFileSuffix=".wsbind" 
+            id="xformJSON2Byte" 
+            requestSchemaLoc="/var/zosconnect/servers/server1/dataXform/json" 
+            requestSchemaSuffix=".json" 
+            responseSchemaLoc="/var/zosconnect/servers/server1/dataXform/json" 
+            responseSchemaSuffix=".json">
+    </zosconnect_zosConnectDataXform>
+
+    <zosconnect_localAdaptersConnectService connectionFactoryRef="wolaCF" 
+            id="wolaBATCH" 
+            registerName="COBOLZCON" 
+            serviceName="CobolService"/>
+
+    <zosLocalAdapters wolaGroup=“GRPNAME1”
+            wolaName2=“GRPNAME2” 
+            wolaName3=“GRPNAME3”/>
+
+    <connectionFactory id="wolaCF" jndiName="eis/ola">
+        <properties.ola/>
+    </connectionFactory>
+
+    <!-- To access this server from a remote client add a host attribute to the following element, e.g. host="*" -->
+    <httpEndpoint host="*" httpPort="9080" httpsPort="9443" id="defaultHttpEndpoint"/>
+
+</server>
