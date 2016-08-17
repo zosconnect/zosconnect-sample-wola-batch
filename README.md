@@ -119,7 +119,7 @@ chmod -R 750 ./dataXform
 </connectionFactory>
 ```
 
-**NOTE:** Change the <server-name> to the actual name of the z/OS Connect instance you created. A sample **server.xml** is included in the package. If you want to use the sample server.xml file then upload it to z/OS in binary mode to keep the contents in ASCII format.
+**NOTE:** Change the server-name to the actual name of the z/OS Connect instance you created. A sample server.xml is included in the package. If you want to use the sample server.xml file then upload it to z/OS in binary mode to keep the contents in ASCII format.
 
 At this point you have service definitions to match the COBOL service sample provided but do not yet have an API created and deployed.
 
