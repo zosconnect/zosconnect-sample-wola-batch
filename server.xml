@@ -26,7 +26,7 @@
     <zosconnect_zosConnectManager requireSecure="false" requireAuth="false"/>
 
     <zosconnect_zosConnectAPIs location="">
-        <zosConnectAPI name=“CobolService”/>
+        <zosConnectAPI name='CobolService'/>
     </zosconnect_zosConnectAPIs>
 
     <zosconnect_zosConnectService dataXformRef="xformJSON2Byte" 
@@ -52,9 +52,9 @@
             registerName="COBOLZCON" 
             serviceName="CobolService"/>
 
-    <zosLocalAdapters wolaGroup=“GRPNAME1”
-            wolaName2=“GRPNAME2” 
-            wolaName3=“GRPNAME3”/>
+    <zosLocalAdapters wolaGroup="GRPNAME1"
+            wolaName2="GRPNAME2" 
+            wolaName3="GRPNAME3"/>
 
     <connectionFactory id="wolaCF" jndiName="eis/ola">
         <properties.ola/>
