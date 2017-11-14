@@ -29,28 +29,9 @@
         <zosConnectAPI name='CobolService'/>
     </zosconnect_zosConnectAPIs>
 
-    <zosconnect_zosConnectService dataXformRef="xformJSON2Byte" 
-            id="CobolService" 
-            invokeURI="/CobolService" 
-            requireAuth="false" 
-            requireSecure="false" 
-            serviceDescription="Test COBOL batch program" 
-            serviceName="CobolService" 
-            serviceRef="wolaBATCH"/>
-
-    <zosconnect_zosConnectDataXform bindFileLoc="/var/zosconnect/servers/server1/dataXform/bind" 
-            bindFileSuffix=".wsbind" 
-            id="xformJSON2Byte" 
-            requestSchemaLoc="/var/zosconnect/servers/server1/dataXform/json" 
-            requestSchemaSuffix=".json" 
-            responseSchemaLoc="/var/zosconnect/servers/server1/dataXform/json" 
-            responseSchemaSuffix=".json">
-    </zosconnect_zosConnectDataXform>
-
-    <zosconnect_localAdaptersConnectService connectionFactoryRef="wolaCF" 
-            id="wolaBATCH" 
-            registerName="COBOLZCON" 
-            serviceName="CobolService"/>
+    <zosconnect_services location="">
+        <service name="CobolService"/>
+    </zosconnect_services>
 
     <zosLocalAdapters wolaGroup="GRPNAME1"
             wolaName2="GRPNAME2" 
