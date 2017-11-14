@@ -1,14 +1,14 @@
-## Sample z/OS application for z/OS Connect Enterprise Edition (EE)
+# Sample z/OS application for z/OS Connect Enterprise Edition (EE)
 
 A COBOL application which demonstrate how to use the WebSphere Optimized Local Adapters (WOLA) native 
 APIs to register to a z/OS Connect Enterprise Edition (EE) server and host a service.
 
-### Prerequisites
+## Prerequisites
 
 * z/OS Connect Enterprise Edition is installed and a z/OS Connect EE instance has been created and configured with WOLA. Refer to the [z/OS Connect EE documentation](http://www.ibm.com/support/knowledgecenter/SS4SVW_2.0.0/com.ibm.zosconnect.doc/configuring/configuring.html) in the IBM Knowledge Center for further information on how to create a new z/OS Connect Enterprise Edition Server and using the WOLA service provider. The steps to configure batch for WOLA is similar to configuring CICS to use WOLA.
 * Enterprise COBOL Compiler
 
-### Installing
+## Installing
 
 * Clone this repository `git clone git://github.com/zosconnect/zosconnect-sample-zos-application.git`
 * Allocate a PDS with 30 tracks for the jobs and source files
@@ -49,7 +49,7 @@ instructions are provided in the sample JCL. The expected return code is **0**.
 * Create the SAR file using the z/OS Connect Enterprise Edition build toolkit.
 `zconbt -p CobolService.properties -f CobolService.sar`
 
-### Configuring
+## Configuring
 
 * Create a directory (if not done yet) called **resources/zosconnect/services** under your server path.
 ```
@@ -85,7 +85,7 @@ chmod -R 750 ./resources
 
 At this point you have service definitions to match the COBOL service sample provided but do not yet have an API created and deployed.
 
-### Deploying the sample API
+## Deploying the sample API
 
 Before deploying the sample API, import the sample project provided. A sample API archive **CobolService.aar** is included in the project.
 
@@ -93,7 +93,7 @@ Before deploying the sample API, import the sample project provided. A sample AP
 
 * To deploy the sample API, follow the steps described in the [Deploying an API](http://www.ibm.com/support/knowledgecenter/SS4SVW_2.0.0/com.ibm.zosconnect.doc/deploying/api_deploy_package.html) section of the z/OS Connect EE documentation in the IBM Knowledge Center.
  
-### Testing the sample API
+## Testing the sample API
 At this point, you are ready to test the sample APIs provided to call the COBOL batch service using z/OS Connect EE.
 * Customize the uploaded copy of **runcobol.jcl** for your environment and submit. Additional
 instructions are provided in the sample JCL. The job is a long-running batch job and is expected to run until it is cancelled, stopped or an unexpected error occured that forces the job to terminate.
@@ -165,11 +165,11 @@ Method: DELETE
 URL: http://<host>:<port>/CobolService/employee
 JSON: No JSON and parameter is used. Only one record is kept by the batch program.
 ```
-### Notice
+## Notice
 
 &copy; Copyright IBM Corporation 2016, 2017
 
-### License
+## License
 ```
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -183,4 +183,3 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
-
