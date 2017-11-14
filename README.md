@@ -1,6 +1,6 @@
 # Sample z/OS application for z/OS Connect Enterprise Edition (EE)
 
-A COBOL application which demonstrate how to use the WebSphere Optimized Local Adapters (WOLA) native 
+A COBOL application which demonstrate how to use the WebSphere Optimized Local Adapters (WOLA) native
 APIs to register to a z/OS Connect Enterprise Edition (EE) server and host a service.
 
 ## Prerequisites
@@ -78,7 +78,7 @@ zconcbl.cbl
   </zosconnect_services>
 
   <zosLocalAdapters wolaGroup=“GRPNAME1”
-      wolaName2=“GRPNAME2” 
+      wolaName2=“GRPNAME2”
       wolaName3=“GRPNAME3”/>
 
   <connectionFactory id="wolaCF" jndiName="eis/ola">
@@ -96,7 +96,7 @@ Before deploying the sample API, import the sample project provided. A sample AP
 
 * On your IBM Explorer for z/OS (or any of the supported Eclipse environment), click on **File -> Import** then click on **General -> Existing Projects into Workspace**. Select the CobolService.zip file included in the package (confirm that the CobolService project is selected under the Projects field) and click **Finish**.
 
-* To deploy the sample API, follow the steps described in the [Deploying an API](http://www.ibm.com/support/knowledgecenter/SS4SVW_2.0.0/com.ibm.zosconnect.doc/deploying/api_deploy_package.html) section of the z/OS Connect EE documentation in the IBM Knowledge Center.
+* To deploy the sample API, follow the steps described in the [Automated API management](https://www.ibm.com/support/knowledgecenter/SS4SVW_3.0.0/com.ibm.zosconnect.doc/administering/auto_api_mgmnt.html) section of the z/OS Connect EE documentation in the IBM Knowledge Center.
 
 ## Testing the sample API
 
@@ -119,7 +119,7 @@ At this point, you are ready to test the sample APIs provided to call the COBOL 
   ========================================
   ```
 
-* To test the API using the z/OS Connect EE API Editor, refer to the section on [Examining, testing, starting and stopping an API](http://www.ibm.com/support/knowledgecenter/SS4SVW_2.0.0/com.ibm.zosconnect.doc/designing/api_edit_view_start_stop.html) section of the z/OS Connect EE documentation in the IBM Knowledge Center.
+* To test the API using the z/OS Connect EE API Editor, refer to the section on [Examining, testing, starting and stopping an API](https://www.ibm.com/support/knowledgecenter/SS4SVW_3.0.0/com.ibm.zosconnect.doc/designing/api_edit_view_start_stop.html) section of the z/OS Connect EE documentation in the IBM Knowledge Center.
 
 * To test the POST method using a REST client, use the following:
   ```json
