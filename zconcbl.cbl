@@ -129,7 +129,7 @@
            MOVE 'GRPNAME1'                     TO REG-GRPNAME1.
            MOVE 'GRPNAME2'                     TO REG-GRPNAME2.
            MOVE 'GRPNAME3'                     TO REG-GRPNAME3.
-           MOVE 'CobolService'                 TO SVC-SERVICE-NAME.
+           MOVE 'ZCONCBL'                      TO SVC-SERVICE-NAME.
 
            INSPECT REG-GRPNAME1 CONVERTING ' ' to LOW-VALUES.
       *
