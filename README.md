@@ -10,7 +10,7 @@ APIs to register to a z/OS Connect Enterprise Edition (EE) server and host a ser
 
 ## Installing
 
-* Clone this repository `git clone git://github.com/zosconnect/zosconnect-sample-zos-application.git`
+* Clone this repository `git clone git@github.com:zosconnect/zosconnect-sample-wola-batch.git`
 * Allocate a PDS with 30 tracks for the jobs and source files
 
 ```text
