@@ -54,6 +54,10 @@ zconcbl.cbl
   zconbt -p CobolService.properties -f CobolService.sar
   ```
 
+![Diagram 1](https://github.com/zosconnect/zosconnect-sample-wola-batch/blob/master/media/Diag1.png)
+
+**NOTE:** The name of the program in the properties file should match the service name in the Cobol program.
+
 ## Configuring
 
 * Create a directory (if not done yet) called **resources/zosconnect/services** under your server path.
