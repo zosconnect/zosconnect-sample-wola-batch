@@ -56,7 +56,7 @@ zconcbl.cbl
 
 ![Diagram 1](https://github.com/zosconnect/zosconnect-sample-wola-batch/blob/master/media/Diag1.png)
 
-**NOTE:** The name of the program in the properties file should match the service name in the Cobol program.
+**NOTE:** The name of the program in the properties file should match the service name in the Cobol program. Refer to the [z/OS Connect EE documentation](https://www.ibm.com/support/knowledgecenter/en/SS4SVW_3.0.0/designing/sar_wola_intro.html) for additional description on the fields in the properties file.
 
 ## Configuring
 
