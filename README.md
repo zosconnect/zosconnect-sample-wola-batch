@@ -3,6 +3,8 @@
 A COBOL application which demonstrate how to use the WebSphere Optimized Local Adapters (WOLA) native
 APIs to register to a z/OS Connect Enterprise Edition (EE) server and host a service.
 
+![WOLA Diagram](https://github.com/zosconnect/zosconnect-sample-wola-batch/blob/master/media/wola-diag.png)
+
 ## Prerequisites
 
 * z/OS Connect Enterprise Edition is installed and a z/OS Connect EE instance has been created and configured with WOLA. Refer to the [z/OS Connect EE documentation](https://www.ibm.com/support/knowledgecenter/SS4SVW_3.0.0/com.ibm.zosconnect.doc/configuring/configuring.html) in the IBM Knowledge Center for further information on how to create a new z/OS Connect Enterprise Edition Server and using the WOLA service provider. The steps to configure batch for WOLA is similar to configuring CICS to use WOLA.
